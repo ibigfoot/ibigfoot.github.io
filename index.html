@@ -35,9 +35,9 @@
 <script type="text/javascript">
 
       function trackThis(e) {
-        console.log('call to track...');
+        console.log(`call to track.. ${e}`);
         analytics.track('field changed', {
-          'new_value':e
+          'new_value' : e
         });
       }
 
