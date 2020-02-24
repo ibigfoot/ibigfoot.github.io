@@ -26,8 +26,18 @@
     Email: <input name="email" required="" size="75" type="email"/> 
     <br><br>
     <input name="submit" type="submit" value="submit"/>
+
+    <input type="text" name="track_this" onchange="trackThis()"/>
 </form> 
+
+
+
 <script type="text/javascript">
+
+      function trackThis() {
+        console.log(this.value);
+      }
+
       function identify(e){
         e.preventDefault();
         var form = e.target;
