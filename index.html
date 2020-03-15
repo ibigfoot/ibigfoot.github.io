@@ -60,7 +60,7 @@
             lastName: lastName
         };
         analytics.identify(user);
-        analytics.track('Lead form submitted', user);
+        analytics.track('Lead form submitted', user, {"source":"elements-web"});
         return true;
       }
 </script>
