@@ -52,15 +52,17 @@
         var firstName = form["first_name"].value;
         var lastName = form["last_name"].value;
         var company = form["company"].value;
+        
         // set the anonymous ID as the identifier to the Salesforce Lead.
         form["00N2v00000XUcin"].value = analytics.user().anonymousId
         var user = {
             email: email, 
             firstName: firstName, 
-            lastName: lastName
+            lastName: lastName,
+            source: "elements-web"
         };
-        analytics.identify(user);
-        analytics.track('Lead form submitted', user, {"source":"elements-web"});
+        analytics.identify(user, {}, {"source":"elements-web"});
+        analytics.track('Lead form submitted', user);
         return true;
       }
 </script>
