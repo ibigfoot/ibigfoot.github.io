@@ -10,28 +10,64 @@
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
     </head>
     <body>
-        <h1>Segment Event Tester</h1>
-        <form class="pure-form pure-form-aligned">
-            <fieldset>
-                <div class="pure-control-group">
-                    <label for="user_id">User ID</label>
-                    <input type="text" id="user_id" placeholder="User Id (leave blank to use anonymous)"/>
-                    <label for="traits">Traits Object</label>
-                    <textarea id="traits" rows="5" cols="20"></textarea>
-                    <button class="pure-button">Identify</button>
-                </div>    
-                
-                
-                
-            </fieldset>
-        </form>
+        <div style="text-align:center;padding: 2em;"><h1>Segment Event Tester</h1></div>
+        <div class="pure-g">
+            <div class="pure-u-1-5"></div>
+            <div class="pure-u-1-5">                
+                <form class="pure-form pure-form-stacked">
+                    <fieldset>
 
-        
-        <input id="event_name"/><button>Track</button>
-        <button>Page</button>
-        <button>Alias</button>
-        <button>Group</button>
+                            <label for="user_id">User ID</label>
+                            <input id="user_id" type="text" placeholder="User ID (leave blank to use anonymous_id) /">
 
+                            <label for="traits">Traits</label>
+                            <textArea id="traits" placeholder="Enter your JSON object here"></textArea>
+          
+                            <button class="pure-button pure-button-primary" onclick="identify()">Identify</button>
 
+                    </fieldset>
+                </form>
+            </div>
+            <div class="pure-u-1-5">                
+                <form class="pure-form pure-form-stacked">
+                    <fieldset>
+
+                            <label for="event_name">Event Name</label>
+                            <input id="event_name" type="text" placeholder="default: Test Event">
+
+                            <label for="properties">Properties</label>
+                            <textArea id="properties" placeholder="Enter your JSON object here"></textArea>
+          
+                            <button class="pure-button pure-button-primary" onclick="track()">Track</button>
+
+                    </fieldset>
+                </form>
+            </div>
+            <div class="pure-u-1-5">                
+                <form class="pure-form pure-form-stacked">
+                    <fieldset>
+
+                            <label for="page_name">Page</label>
+                            <input id="page_name" type="text" placeholder="Page Name">
+          
+                            <button class="pure-button pure-button-primary" onclick="page()">Page</button>
+
+                    </fieldset>
+                </form>
+            </div>
+            <div class="pure-u-1-5"></div>         
+        </div>
+
+        <script type="text/javascript">
+            function identify() {
+                console.log('idenitfy!');
+            }
+            function track() {
+                console.log('track');
+            }
+            function page() {
+                console.log('page');
+            }
+        </script>
     </body>
 </html>
