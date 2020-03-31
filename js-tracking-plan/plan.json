@@ -1,0 +1,371 @@
+{
+	"create_time": "2020-03-31T03:11:01.000Z",
+	"display_name": "Troys-Testing-Iterable",
+	"name": "workspaces/segment-sa/tracking-plans/rs_1ZsOJLmQyHAlpYihUwxwaTzZJQB",
+	"rules": {
+		"events": [
+			{
+				"description": "Iterable event",
+				"name": "Email Bounced",
+				"rules": {
+					"$schema": "http://json-schema.org/draft-07/schema#",
+					"labels": {
+					},
+					"properties": {
+						"context": {
+						},
+						"properties": {
+							"type": "object"
+						},
+						"traits": {
+							"type": "object"
+						}
+					},
+					"type": "object"
+				},
+				"version": 1
+			},
+			{
+				"description": "Iterable event",
+				"name": "Email Delivered",
+				"rules": {
+					"$schema": "http://json-schema.org/draft-07/schema#",
+					"labels": {
+					},
+					"properties": {
+						"context": {
+						},
+						"properties": {
+							"type": "object"
+						},
+						"traits": {
+							"type": "object"
+						}
+					},
+					"type": "object"
+				},
+				"version": 1
+			},
+			{
+				"description": "Iterable event",
+				"name": "Email Link Clicked",
+				"rules": {
+					"$schema": "http://json-schema.org/draft-07/schema#",
+					"labels": {
+					},
+					"properties": {
+						"context": {
+						},
+						"properties": {
+							"type": "object"
+						},
+						"traits": {
+							"type": "object"
+						}
+					},
+					"type": "object"
+				},
+				"version": 1
+			},
+			{
+				"description": "Iterable Event",
+				"name": "Email Marked as Spam",
+				"rules": {
+					"$schema": "http://json-schema.org/draft-07/schema#",
+					"labels": {
+					},
+					"properties": {
+						"context": {
+						},
+						"properties": {
+							"type": "object"
+						},
+						"traits": {
+							"type": "object"
+						}
+					},
+					"type": "object"
+				},
+				"version": 1
+			},
+			{
+				"description": "Iterable event",
+				"name": "Email Opened",
+				"rules": {
+					"$schema": "http://json-schema.org/draft-07/schema#",
+					"labels": {
+					},
+					"properties": {
+						"context": {
+						},
+						"properties": {
+							"type": "object"
+						},
+						"traits": {
+							"type": "object"
+						}
+					},
+					"type": "object"
+				},
+				"version": 1
+			},
+			{
+				"description": "Iterable event",
+				"name": "In-App Clicked",
+				"rules": {
+					"$schema": "http://json-schema.org/draft-07/schema#",
+					"labels": {
+					},
+					"properties": {
+						"context": {
+						},
+						"properties": {
+							"type": "object"
+						},
+						"traits": {
+							"type": "object"
+						}
+					},
+					"type": "object"
+				},
+				"version": 1
+			},
+			{
+				"description": "Iterable event",
+				"name": "In-App Delivered",
+				"rules": {
+					"$schema": "http://json-schema.org/draft-07/schema#",
+					"labels": {
+					},
+					"properties": {
+						"context": {
+						},
+						"properties": {
+							"type": "object"
+						},
+						"traits": {
+							"type": "object"
+						}
+					},
+					"type": "object"
+				},
+				"version": 1
+			},
+			{
+				"description": "Iterable event",
+				"name": "In-App Opened",
+				"rules": {
+					"$schema": "http://json-schema.org/draft-07/schema#",
+					"labels": {
+					},
+					"properties": {
+						"context": {
+						},
+						"properties": {
+							"type": "object"
+						},
+						"traits": {
+							"type": "object"
+						}
+					},
+					"type": "object"
+				},
+				"version": 1
+			},
+			{
+				"description": "Iterable event",
+				"name": "Mobile App Uninstalled",
+				"rules": {
+					"$schema": "http://json-schema.org/draft-07/schema#",
+					"labels": {
+					},
+					"properties": {
+						"context": {
+						},
+						"properties": {
+							"type": "object"
+						},
+						"traits": {
+							"type": "object"
+						}
+					},
+					"type": "object"
+				},
+				"version": 1
+			},
+			{
+				"description": "Iterable event",
+				"name": "Push Bounced",
+				"rules": {
+					"$schema": "http://json-schema.org/draft-07/schema#",
+					"labels": {
+					},
+					"properties": {
+						"context": {
+						},
+						"properties": {
+							"type": "object"
+						},
+						"traits": {
+							"type": "object"
+						}
+					},
+					"type": "object"
+				},
+				"version": 1
+			},
+			{
+				"description": "Iterable event",
+				"name": "Push Delivered",
+				"rules": {
+					"$schema": "http://json-schema.org/draft-07/schema#",
+					"labels": {
+					},
+					"properties": {
+						"context": {
+						},
+						"properties": {
+							"type": "object"
+						},
+						"traits": {
+							"type": "object"
+						}
+					},
+					"type": "object"
+				},
+				"version": 1
+			},
+			{
+				"description": "Iterable event",
+				"name": "Push Opened",
+				"rules": {
+					"$schema": "http://json-schema.org/draft-07/schema#",
+					"labels": {
+					},
+					"properties": {
+						"context": {
+						},
+						"properties": {
+							"type": "object"
+						},
+						"traits": {
+							"type": "object"
+						}
+					},
+					"type": "object"
+				},
+				"version": 1
+			},
+			{
+				"description": "Iterable event",
+				"name": "SMS Bounced",
+				"rules": {
+					"$schema": "http://json-schema.org/draft-07/schema#",
+					"labels": {
+					},
+					"properties": {
+						"context": {
+						},
+						"properties": {
+							"type": "object"
+						},
+						"traits": {
+							"type": "object"
+						}
+					},
+					"type": "object"
+				},
+				"version": 1
+			},
+			{
+				"description": "Iterable event",
+				"name": "SMS Delivered",
+				"rules": {
+					"$schema": "http://json-schema.org/draft-07/schema#",
+					"labels": {
+					},
+					"properties": {
+						"context": {
+						},
+						"properties": {
+							"type": "object"
+						},
+						"traits": {
+							"type": "object"
+						}
+					},
+					"type": "object"
+				},
+				"version": 1
+			},
+			{
+				"description": "Iterable event",
+				"name": "SMS Received",
+				"rules": {
+					"$schema": "http://json-schema.org/draft-07/schema#",
+					"labels": {
+					},
+					"properties": {
+						"context": {
+						},
+						"properties": {
+							"type": "object"
+						},
+						"traits": {
+							"type": "object"
+						}
+					},
+					"type": "object"
+				},
+				"version": 1
+			},
+			{
+				"description": "Iterable event",
+				"name": "Subscribed",
+				"rules": {
+					"$schema": "http://json-schema.org/draft-07/schema#",
+					"labels": {
+					},
+					"properties": {
+						"context": {
+						},
+						"properties": {
+							"type": "object"
+						},
+						"traits": {
+							"type": "object"
+						}
+					},
+					"type": "object"
+				},
+				"version": 1
+			},
+			{
+				"description": "Iterable event",
+				"name": "Unsubcribed",
+				"rules": {
+					"$schema": "http://json-schema.org/draft-07/schema#",
+					"labels": {
+					},
+					"properties": {
+						"context": {
+						},
+						"properties": {
+							"type": "object"
+						},
+						"traits": {
+							"type": "object"
+						}
+					},
+					"type": "object"
+				},
+				"version": 1
+			}
+		],
+		"group_traits": [
+		],
+		"identify_traits": [
+		]
+	},
+	"update_time": "2020-03-31T03:14:46.000Z"
+}
