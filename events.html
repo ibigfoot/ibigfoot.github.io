@@ -12,9 +12,9 @@
     <body>
         <div style="text-align:center;padding: 2em;"><h1>Segment Event Tester</h1></div>
         <div class="pure-g">
-            <div class="pure-u-1-5"></div>
-            <div class="pure-u-1-5">                
-                <form class="pure-form pure-form-stacked">
+            <div class="pure-u-2-24"></div>
+            <div class="pure-u-7-24">                
+                <div class="pure-form pure-form-stacked">
                     <fieldset>
 
                             <label for="user_id">User ID</label>
@@ -26,10 +26,10 @@
                             <button class="pure-button pure-button-primary" onclick="identify()">Identify</button>
 
                     </fieldset>
-                </form>
+                </div>
             </div>
-            <div class="pure-u-1-5">                
-                <form class="pure-form pure-form-stacked">
+            <div class="pure-u-7-24">                
+                <div class="pure-form pure-form-stacked">
                     <fieldset>
 
                             <label for="event_name">Event Name</label>
@@ -41,10 +41,10 @@
                             <button class="pure-button pure-button-primary" onclick="track()">Track</button>
 
                     </fieldset>
-                </form>
+                </div>
             </div>
-            <div class="pure-u-1-5">                
-                <form class="pure-form pure-form-stacked">
+            <div class="pure-u-8-24">                
+                <div class="pure-form pure-form-stacked">
                     <fieldset>
 
                             <label for="page_name">Page</label>
@@ -53,20 +53,43 @@
                             <button class="pure-button pure-button-primary" onclick="page()">Page</button>
 
                     </fieldset>
-                </form>
-            </div>
-            <div class="pure-u-1-5"></div>         
+                </div>
+            </div>      
         </div>
 
         <script type="text/javascript">
             function identify() {
-                console.log('idenitfy!');
+                let userId = document.getElementById('user_id').value;
+                let traits = document.getElementById('traits').value;
+
+                try {
+                    document.getElementById('traits').style = "";
+                    if(userId != "") {
+                        analytics.identify(eventName, JSON.parse(traits));
+                    } else {
+                        analytics.identify(JSON.parse(traits));
+                    }
+                    
+                } catch (error) {
+                    console.log(error);
+                    document.getElementById('traits').style = "border: 2px solid red";
+                }
             }
             function track() {
-                console.log('track');
+                let properties = document.getElementById('properties').value;
+                let eventName = document.getElementById('event_name').value;
+
+                try {
+                    document.getElementById('properties').style = "";
+                    analytics.track(eventName, properties != "" ? JSON.parse(properties) : "");
+                } catch (error) {
+                    console.log(error);
+                    document.getElementById('properties').style = "border: 2px solid red";
+                }
             }
             function page() {
-                console.log('page');
+                console.log('page : '+document.getElementById('page_name').value);
+                analytics.page(document.getElementById('page_name').value == '' ? 'some page' : document.getElementById('page_name').value);
             }
         </script>
     </body>
