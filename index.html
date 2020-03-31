@@ -3,14 +3,15 @@
 <head> 
 <script>
   !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
-  analytics.load("oCjj4cg7gTqSIyt1T0cgNqKObvCQaAZC");
+  analytics.load("uQ4K0zuw9dBKgnTlCAMu0731FoUgqBNa");
   analytics.page();
   }}();
 </script>
 
 </head> 
 <body> 
-<h1>Tell us about yourself..</h1> 
+<p>
+<h1>Submit a Lead</h1> 
   
 <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" name="travel" onsubmit="return identify(event)">
 
@@ -39,21 +40,26 @@
 <input type="submit" name="submit">
   
 </form> 
-
+  </p>
 <script type="text/javascript">
 
       function identify(e){
-        console.log('tracking... ');
-        var user = {
-          email: document.getElementById("email").value, 
-          firstName: document.getElementById("first_name").value, 
-          lastName: document.getElementById("last_name").value
-        };
-        console.log(user);
+        e.preventDefault();
+        var form = e.target;
+        var email = form["email"].value;
+        var firstName = form["first_name"].value;
+        var lastName = form["last_name"].value;
+        var company = form["company"].value;
+        
         // set the anonymous ID as the identifier to the Salesforce Lead.
-        document.getElementById("00N2v00000XUcin").value = analytics.user().anonymousId();
-
-        analytics.identify(user);
+        form["00N2v00000XUcin"].value = analytics.user().anonymousId
+        var user = {
+            email: email, 
+            firstName: firstName, 
+            lastName: lastName,
+            source: "elements-web"
+        };
+        analytics.identify(user, {}, {"source":"elements-web"});
         analytics.track('Lead form submitted', user);
         return true;
       }
