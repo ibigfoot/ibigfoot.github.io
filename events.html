@@ -65,7 +65,7 @@
                 try {
                     document.getElementById('traits').style = "";
                     if(userId != "") {
-                        analytics.identify(eventName, JSON.parse(traits));
+                        analytics.identify(userId, JSON.parse(traits));
                     } else {
                         analytics.identify(JSON.parse(traits));
                     }
