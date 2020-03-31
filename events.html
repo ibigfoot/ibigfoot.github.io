@@ -10,11 +10,28 @@
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
     </head>
     <body>
+        <h1>Segment Event Tester</h1>
+        <form class="pure-form pure-form-aligned">
+            <fieldset>
+                <div class="pure-control-group">
+                    <label for="user_id">User ID</label>
+                    <input type="text" id="user_id" placeholder="User Id (leave blank to use anonymous)"/>
+                    <label for="traits">Traits Object</label>
+                    <textarea id="traits" rows="5" cols="20"></textarea>
+                    <button class="pure-button">Identify</button>
+                </div>    
+                
+                
+                
+            </fieldset>
+        </form>
 
-        <button>Identify</button>
-        <button>Track</button>
+        
+        <input id="event_name"/><button>Track</button>
         <button>Page</button>
         <button>Alias</button>
         <button>Group</button>
+
+
     </body>
 </html>
