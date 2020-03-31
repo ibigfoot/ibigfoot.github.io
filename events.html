@@ -23,7 +23,8 @@
                             <label for="traits">Traits</label>
                             <textArea id="traits" placeholder="Enter your JSON object here" style="width:90%" rows="10" Placeholder='{"property":"value"}'></textArea>
           
-                            <button class="pure-button pure-button-primary" onclick="identify()">Identify</button>
+                            <button class="pure-button pure-button-primary" onclick="identify()">Identify</button><span id="identified" style="color:grey; font-style:italic; display:none">identified ...</span>
+                            
 
                     </fieldset>
                 </div>
@@ -39,6 +40,7 @@
                             <textArea id="properties" placeholder="Enter your JSON object here" style="width:90%" rows="10" Placeholder='{"property":"value"}'></textArea>
           
                             <button class="pure-button pure-button-primary" onclick="track()">Track</button>
+                            <span id="tracked" style="color:grey; font-style:italic; display:none">tracked ...</span>
 
                     </fieldset>
                 </div>
@@ -51,6 +53,7 @@
                             <input id="page_name" type="text" placeholder="Page Name">
           
                             <button class="pure-button pure-button-primary" onclick="page()">Page</button>
+                            <span id="paged" style="color:grey; font-style:italic; display:none">page'd ...</span>
 
                     </fieldset>
                 </div>
@@ -63,16 +66,17 @@
                 let traits = document.getElementById('traits').value;
 
                 try {
-                    document.getElementById('traits').style = "";
+                    document.getElementById('traits').style = "width:90%";
                     if(userId != "") {
                         analytics.identify(userId, JSON.parse(traits));
+                        showMessage(document.getElementById('identified'));
                     } else {
                         analytics.identify(JSON.parse(traits));
                     }
                     
                 } catch (error) {
                     console.log(error);
-                    document.getElementById('traits').style = "border: 2px solid red";
+                    document.getElementById('traits').style = "border: 2px solid red;width:90%";
                 }
             }
             function track() {
@@ -80,16 +84,23 @@
                 let eventName = document.getElementById('event_name').value;
 
                 try {
-                    document.getElementById('properties').style = "";
+                    document.getElementById('properties').style = "width:90%";
                     analytics.track(eventName, properties != "" ? JSON.parse(properties) : "");
+                    showMessage(document.getElementById('tracked'));
                 } catch (error) {
                     console.log(error);
-                    document.getElementById('properties').style = "border: 2px solid red";
+                    document.getElementById('properties').style = "border: 2px solid red;width:90%";
                 }
             }
             function page() {
                 console.log('page : '+document.getElementById('page_name').value);
                 analytics.page(document.getElementById('page_name').value == '' ? 'some page' : document.getElementById('page_name').value);
+                showMessage(document.getElementById('paged'));
+            }
+
+            function showMessage(element) {
+                element.style.display = 'block';
+                setTimeout(function(){element.style.display = 'none';}, 2000 );
             }
         </script>
     </body>
